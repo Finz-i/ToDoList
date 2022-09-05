@@ -1,0 +1,279 @@
+:root {
+    --dark: #212529;
+    --darker: #343a40;
+    --grey: #495057;
+    --lightgrey: #6c757d;
+    --violet: #564592;
+    --blue: #724CF9;
+    --purple: #CA7DF9;
+    --pink: #F896D8;
+    --yellow: #EDF67D;
+    --lightpurple: #dab6fc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 1000px;
+    background: var(--dark);
+    color: #FFF;
+    padding: 60px;
+}
+
+header {
+    margin: 0 auto;
+    padding: 32px 16px;
+    width: 100%;
+    max-width: 800px;
+    align-content: center;
+}
+
+button {
+    display: block;
+    /* padding: 5px; */
+    /* margin: 3px; */
+    position: absolute;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+#new-task-form {
+    display: flex;
+}
+
+.color-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+}
+
+.color-point {
+    appearance: none;
+    background: var(--lightgrey);
+    border-radius: 10px;
+    height: 12px;
+    width: 12px;
+    transition: 0.2s;
+    background-color: var(--lightgrey);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.color-one:hover {
+    background-color: #a340ff;
+    border-radius: 100%;
+}
+
+.color-two:hover {
+    background-color: #ff4040;
+    border-radius: 100%;
+}
+
+.color-three:hover {
+    background-color: #7cff40;
+    border-radius: 100%;
+}
+
+.color-one:checked {
+    background-color: #a340ff;
+    border-radius: 100%;
+    width: 20px;
+    height: 10px;
+    border-radius: 4px;
+}
+
+.color-two:checked {
+    background-color: #ff4040;
+    border-radius: 100%;
+    width: 20px;
+    height: 10px;
+    border-radius: 4px;
+}
+
+.color-three:checked {
+    background-color: #7cff40;
+    border-radius: 100%;
+    width: 20px;
+    height: 10px;
+    border-radius: 4px;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: #6c757d;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--dark);
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.indicator {
+    position: relative;
+    width: 9px;
+    height: 17px;
+    margin: 13px 6px 0 0;
+    border-radius: 5px;
+}
+
+#new-task-input::placeholder {
+    color: #282a2c;
+}
+
+#new-task-submit {
+    margin-left: 10px;
+    background-image: linear-gradient(to left, #ef476f, #9e56f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s all;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: var(--purple);
+}
+
+#new-task-submit:hover {
+    background-image: linear-gradient(to left, #eb3660, #943ef5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 60%;
+}
+
+.task-header {
+    margin-left: 1rem;
+}
+
+.task-list {
+    margin: 0 auto;
+    padding: 32px 16px;
+    width: 100%;
+    max-width: 800px;
+    align-content: center;
+}
+
+.task-list .task-header {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+.task-content {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px;
+    transition: 0.5s;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-color-point {
+    width: 3px;
+    height: 43px;
+    border-radius: 7px;
+    /* background-color: #a340ff; */
+    margin-right: 2px;
+}
+
+.task-row {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    color: #dee2e6;
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    width: 600px;
+    transition: 0.4s;
+}
+
+.task-row::placeholder {
+    color: #b8b9bb;
+}
+
+.task-row:not(:read-only) {
+    color: rgb(255, 146, 166);
+}
+
+.actions {
+    padding-left: 6px;
+    width: 50px;
+    position: relative;
+}
+
+
+.list {
+    width: 684px;
+}
+
+.edit {
+    background-image: linear-gradient(to left, #ef476f, #9e56f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s all;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    display: block;
+    padding-top: 3px;
+}
+
+.delete {
+    color: crimson;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s all;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 23px;
+}
+
+.actions button {
+    transition: 0.2s;
+}
+
+.actions button:hover {
+    opacity: 80%;
+}
+
+.actions button:active {
+    opacity: 60%;
+}

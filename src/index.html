@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+    <title>Список цілей</title>
+</head>
+
+<body>
+    <header>
+        <h1>Список цілей 2023</h1>
+
+        <form id="new-task-form">
+            <input type="text" id="new-task-input" placeholder="Що б ви хотіли запланувати?" />
+
+            <div class="color-box">
+                <div class="radio-box"> <input type="radio" name="color" value="one" class="color-point color-one" id="color-one" checked></input>
+                </div>
+                <div class="radio-box"> <input type="radio" name="color" value="two" class="color-point color-two" id="color-two"></input>
+                </div>
+                <div class="radio-box"><input type="radio" name="color" value="three" class="color-point color-three" id="color-three"></input>
+                </div>
+            </div>
+
+            <input class="submit" type="submit" id="new-task-submit" value="Add to list">
+        </form>
+    </header>
+
+    <main>
+        <section class="task-list">
+            <h2 class="task-header">Цілі</h2>
+
+            <div id="tasks" class="list">
+
+                <!-- <div class="task">
+                    <div class="content" id="tasks">
+                        <div class="task-color-point" id="color-point"></div>
+                        <input class="task-row" id="row" placeholder="Ваша ціль"></input>
+                    </div>
+                    <div class="actions" id="two-buttons">
+                        <button class="edit" id="button-edit">edit</button>
+                        <button class="delete" id="button-delete">delete</button>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
